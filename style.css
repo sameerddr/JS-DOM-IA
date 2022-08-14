@@ -8,6 +8,11 @@ nav {
     background-color: wheat;
 }
 
+nav {
+    display: flex;
+    justify-content: center;
+}
+
 nav button {
     padding: 10px 20px;
 }
@@ -86,11 +91,6 @@ button {
     background-color: brown;
     color: white;
     cursor: pointer;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
 }
 
 
