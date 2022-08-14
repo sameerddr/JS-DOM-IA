@@ -44,8 +44,12 @@ var blue_secttion = document.querySelector("#blue_section");
 
 function create() {
 
+    // we have set the height and width of the create element div
+
     container1.style.width = "500px";
     container1.style.height = "400px";
+
+    // Below we have created the input filed for entering the data
     var input = document.createElement("input");
     input.type = "text";
     input.className = "input-name";
@@ -56,27 +60,34 @@ function create() {
     input.style.margin = "0px auto";
 
 
-
+    // Here, we created a  first button "RED" inside the create button container
     var button1 = document.createElement('BUTTON');
     var text1 = document.createTextNode("RED");
     button1.setAttribute('ID', 'redbutton');
     button1.setAttribute('CLASS', 'color_buttons red');
     button1.appendChild(text1);
+
+    // Here, we created a  second button "YELLOW" inside the create button container
     var button2 = document.createElement('BUTTON');
     var text2 = document.createTextNode("YELLOW");
     button2.setAttribute('ID', 'yellowbutton');
     button2.setAttribute('CLASS', 'color_buttons yellow');
     button2.appendChild(text2);
+
+    // Here, we created a  third button "BLUE" inside the create button container
     var button3 = document.createElement('BUTTON');
     var text3 = document.createTextNode("BLUE");
     button3.setAttribute('ID', 'bluebutton');
     button3.setAttribute('CLASS', 'color_buttons blue');
     button3.appendChild(text3);
+    // Here, we created a  fourth button "BLACK" inside the create button container
     var button4 = document.createElement('BUTTON');
     var text4 = document.createTextNode("BLACK");
     button4.setAttribute('ID', 'blackbutton');
     button4.setAttribute('CLASS', 'color_buttons black');
     button4.appendChild(text4);
+
+    // here we pushed the button & input filed inside the container1
     container1.appendChild(input);
     container1.appendChild(button1);
     container1.appendChild(button2);
@@ -84,41 +95,48 @@ function create() {
     container1.appendChild(button4);
 
 
+    // here we created a onclick function for button1 
     button1.onclick = function red(e) {
 
-        e.preventDefault();
-        let data = document.getElementById("input_data").value;
-        // let new_cont1 = document.querySelector(".red");
-        new_cont1 = document.createElement("div");
-        new_cont1.setAttribute('ID', 'content_red');
-        new_cont1.innerText = data;
-
-
-
-        var button_del2 = document.createElement('BUTTON');
-        var text3 = document.createTextNode("\u{1F5D1}");
-        button_del2.setAttribute('ID', 'del_button');
-        button_del2.appendChild(text3);
-        new_cont1.appendChild(button_del2);
-
-        button_del2.onclick = function del(e) {
             e.preventDefault();
-            new_cont1.remove();
-        }
-        var button_edit = document.createElement('BUTTON');
-        var text_edit = document.createTextNode("\u{1F58A}");
-        button_edit.setAttribute('ID', 'edit_button');
-        button_edit.appendChild(text_edit);
-        new_cont1.appendChild(button_edit);
 
-        button_edit.onclick = function edit(e) {
-            e.preventDefault();
-            let edit_data = prompt("Enter new data");
-            new_cont1.innerText = edit_data;
-        }
+            // here we are getting the value of the input filed 
+            let data = document.getElementById("input_data").value;
+            new_cont1 = document.createElement("div");
+            new_cont1.setAttribute('ID', 'content_red');
+            new_cont1.innerText = data;
 
-        red_secttion.appendChild(new_cont1);
-    }
+
+            // the delete button is created
+            var button_del2 = document.createElement('BUTTON');
+            var text3 = document.createTextNode("\u{1F5D1}");
+            button_del2.setAttribute('ID', 'del_button');
+            button_del2.appendChild(text3);
+            new_cont1.appendChild(button_del2);
+
+            button_del2.onclick = function del(e) {
+                e.preventDefault();
+                new_cont1.remove();
+            }
+
+            // the edit button is created
+            var button_edit = document.createElement('BUTTON');
+            var text_edit = document.createTextNode("\u{1F58A}");
+            button_edit.setAttribute('ID', 'edit_button');
+            button_edit.appendChild(text_edit);
+            new_cont1.appendChild(button_edit);
+
+            button_edit.onclick = function edit(e) {
+                e.preventDefault();
+                let edit_data = prompt("Enter new data");
+                new_cont1.innerText = edit_data;
+            }
+
+            red_secttion.appendChild(new_cont1);
+        }
+        // here we created a onclick function for button2
+
+
     button2.onclick = function yellow(e) {
 
         e.preventDefault();
@@ -155,6 +173,12 @@ function create() {
 
         yellow_secttion.appendChild(new_cont2);
     }
+
+
+    // here we created a onclick function for button3
+
+
+
     button3.onclick = function blue(e) {
 
         e.preventDefault();
@@ -189,6 +213,9 @@ function create() {
         }
 
         blue_secttion.appendChild(new_cont3);
+
+        // here we created a onclick function for button3
+
 
         button4.onclick = function black(e) {
 
