@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>DOM Project</title>
+</head>
+
+<body>
+
+    <nav class="filter filters-button-group">
+        <button class="button is-checked" data-filter="*">All</button>
+        <button class="button btn_black" data-filter="Black">Black</button>
+        <button class="button btn_blue " data-filter="Blue">Blue</button>
+        <button class="button btn_red" id="red" data-filter="Red">Red</button>
+        <button class="button btn_yellow" data-filter="Yellow">Yellow</button>
+        <button class="create btn_create" id="ct" onclick="create()">Create Task</button>
+    </nav>
+    <div class="container1">
+
+    </div>
+    <div class="container">
+        <div class="item Black" id="black_section">
+            <h2 style="text-align: center;">Black</h2>
+        </div>
+        <div class="item Blue" id="blue_section">
+            <h2 style="text-align: center;">Blue</h2>
+
+        </div>
+        <div class="item Red" id="red_section">
+            <h2 style="text-align: center;">Red</h2>
+
+        </div>
+        <div class="item Yellow" id="yellow_section">
+            <h2 style="text-align: center;">Yellow</h2>
+
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
